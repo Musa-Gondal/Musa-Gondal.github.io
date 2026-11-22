@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Musa Gondal | AI and software engineer</title>
+<meta name="description" content="Portfolio of Muhammad Hassan Musa Gondal, CS at LUMS '27: LLM post-training, multi-agent systems, cloud and full-stack projects.">
+<meta property="og:title" content="Musa Gondal | AI and software engineer">
+<meta property="og:description" content="LLM post-training, agent systems, and the infrastructure under them.">
+<link rel="canonical" href="https://musa-gondal.github.io/">
+<meta property="og:url" content="https://musa-gondal.github.io/">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Instrument+Sans:wght@400;600&amp;display=swap">
+<link rel="stylesheet" href="styles.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <a class="brand" href="#top">Musa Gondal</a>
+  <button class="menu" type="button" aria-expanded="false" aria-controls="links">Menu</button>
+  <nav id="links" aria-label="Main">
+    <a href="#results">Results</a><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="paper" aria-hidden="true"></div>
+    <div class="wrap hero-grid">
+      <div>
+        <p class="label" data-scramble>Computer Science, LUMS ’27 · Lahore</p>
+        <h1><span><span>Musa</span></span> <span><span>Gondal</span></span></h1>
+        <p class="lead">I train language models, wire them into agents, and deploy the systems underneath.</p>
+        <p class="availability">Available now for internships and full-time roles, remote or on-site.</p>
+        <div class="actions">
+          <a class="btn primary" href="#work" data-magnet>See the work</a>
+          <a class="btn" href="mailto:musagondal94@gmail.com">Email me</a>
+        </div>
+      </div>
+      <figure class="graph">
+        <svg viewBox="0 0 400 462" role="img" aria-label="My agent pipeline: director, architect, engineer, run code, QA subgraph and scorer, looping back to the engineer">
+          <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="head" d="M0 0L10 5L0 10z"/></marker></defs>
+          <g class="edges">
+            <path d="M200 64v28" marker-end="url(#arrow)"/><path d="M200 140v28" marker-end="url(#arrow)"/><path d="M200 216v28" marker-end="url(#arrow)"/><path d="M200 292v28" marker-end="url(#arrow)"/><path d="M200 368v28" marker-end="url(#arrow)"/>
+            <path class="loop" d="M310 420H358V192H312" marker-end="url(#arrow)"/>
+          </g>
+          <g class="node"><rect x="90" y="16" width="220" height="48"/><text x="200" y="46">Director</text></g>
+          <g class="node"><rect x="90" y="92" width="220" height="48"/><text x="200" y="122">Architect</text></g>
+          <g class="node"><rect x="90" y="168" width="220" height="48"/><text x="200" y="198">Engineer</text></g>
+          <g class="node"><rect x="90" y="244" width="220" height="48"/><text x="200" y="274">Run code</text></g>
+          <g class="node"><rect x="90" y="320" width="220" height="48"/><text x="200" y="350">QA subgraph</text></g>
+          <g class="node"><rect x="90" y="396" width="220" height="48"/><text x="200" y="426">Scorer</text></g>
+          <text class="loop-text" transform="translate(374 306) rotate(90)">human says refine</text>
+        </svg>
+        <figcaption><span id="run-status" aria-live="polite">A real graph from my agents project</span><button class="btn" id="run" type="button">Run the graph</button></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="results" id="results">
+    <div class="wrap">
+      <p class="label" data-scramble>Evaluation, including what didn’t work</p>
+      <div class="results-top">
+        <p class="big"><span data-count="79.2">79.2</span>%</p>
+        <div>
+          <h2>of decisive comparisons won by my fine-tuned model over its base.</h2>
+          <p>Qwen2.5-0.5B on 300 AlpacaEval prompts, judged blind by Gemini 3.6 Flash. Ties excluded; 95% interval 74.2 to 83.5%.</p>
+        </div>
+      </div>
+      <div class="result reveal">
+        <div class="result-head"><h3>SFT vs. base</h3><p class="label">AlpacaEval-300</p></div>
+        <svg class="bar" viewBox="0 0 300 10" preserveAspectRatio="none" aria-hidden="true"><rect class="w" width="229" height="10"/><rect class="t" x="229" width="11" height="10"/><rect class="l" x="240" width="60" height="10"/></svg>
+        <p class="counts"><span>229 wins</span><span>11 ties</span><span>60 losses</span></p>
+        <p class="note">A clear improvement.</p>
+      </div>
+      <div class="result reveal">
+        <div class="result-head"><h3>DPO vs. SFT</h3><p class="label">HH-RLHF-300</p></div>
+        <svg class="bar" viewBox="0 0 300 10" preserveAspectRatio="none" aria-hidden="true"><rect class="w" width="127" height="10"/><rect class="t" x="127" width="73" height="10"/><rect class="l" x="200" width="100" height="10"/></svg>
+        <p class="counts"><span>127 wins</span><span>73 ties</span><span>100 losses</span></p>
+        <p class="note">Leans better, but not significant (p = 0.08).</p>
+      </div>
+      <div class="result reveal">
+        <div class="result-head"><h3>DPO vs. SFT</h3><p class="label">UltraFeedback, on AlpacaEval-300</p></div>
+        <svg class="bar" viewBox="0 0 300 10" preserveAspectRatio="none" aria-hidden="true"><rect class="w" width="121" height="10"/><rect class="t" x="121" width="65" height="10"/><rect class="l" x="186" width="114" height="10"/></svg>
+        <p class="counts"><span>121 wins</span><span>65 ties</span><span>114 losses</span></p>
+        <p class="note">No measurable difference (p = 0.70). I report that too.</p>
+      </div>
+      <a class="source" href="https://github.com/Musa-Gondal/Advgenai-pa2/blob/HEAD/outputs/eval/full/SUMMARY.md" target="_blank" rel="noopener">Read the full evaluation <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+
+  <section class="work" id="work">
+    <div class="wrap">
+      <h2 class="reveal">Eight things I’ve built.</h2>
+      <p class="intro">Coursework, team projects and one app I made for myself. Each says which it is, and the public ones link to code.</p>
+      <div class="bento">
+        <article class="card c7 ink reveal">
+          <p class="label">Multi-agent systems · Coursework · Spring 2026</p>
+          <h3>Agents that write, run and score code</h3>
+          <p>A LangGraph state graph takes a plain-English game request through architect, engineer, QA and scorer agents. The QA subgraph checks syntax, logic and performance separately, and a human decides whether to loop again.</p>
+          <ul class="tags"><li>LangGraph</li><li>LangChain</li><li>Databricks</li><li>Llama 3.3</li></ul>
+          <a class="source" href="https://github.com/Musa-Gondal/multi-agent-dino-runner" target="_blank" rel="noopener">View source<span class="sr"> for the agent system</span> <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="card c5 accent reveal">
+          <p class="label">LLM post-training · Coursework · Fall 2026</p>
+          <h3>SFT and DPO, from scratch</h3>
+          <p>Hand-written training loops for Qwen2.5-0.5B, without Trainer, plus a LoRA-DPO track with TRL. It runs on Modal GPUs, with a CPU test that covers the pipeline end to end.</p>
+          <ul class="tags"><li>PyTorch</li><li>Hugging Face</li><li>PEFT</li><li>Modal</li></ul>
+          <a class="source" href="https://github.com/Musa-Gondal/Advgenai-pa2" target="_blank" rel="noopener">View source<span class="sr"> for SFT and DPO</span> <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="card c12 sky reveal">
+          <ol class="flow" aria-label="TaskFlow architecture"><li>App Service</li><li>Durable Function</li><li>AKS validator</li><li>ACI report job</li><li>Blob PDF</li></ol>
+          <p class="label">Cloud · Coursework, built on a starter repo · Spring 2026</p>
+          <h3>TaskFlow on Azure</h3>
+          <p>I implemented the Durable Functions orchestration and deployed the pipeline: a validator on AKS, and report jobs that each get a fresh ACI container, deleted afterwards. The web app deploys through GitHub Actions.</p>
+          <ul class="tags"><li>Azure</li><li>Durable Functions</li><li>AKS</li><li>ACI</li><li>ACR</li><li>GitHub Actions</li></ul>
+          <a class="source" href="https://github.com/Musa-Gondal/CS487-PA4" target="_blank" rel="noopener">View source<span class="sr"> for TaskFlow</span> <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="card c4 reveal">
+          <p class="label">Full stack · Coursework · Spring 2026</p>
+          <h3>Ludo Online</h3>
+          <p>Four-player games over WebSockets. The server owns the dice and validates every move, and an automatic player takes over when someone disconnects.</p>
+          <ul class="tags"><li>React</li><li>TypeScript</li><li>Socket.IO</li><li>MongoDB</li></ul>
+          <a class="source" href="https://github.com/Musa-Gondal/Ludo-online" target="_blank" rel="noopener">View source<span class="sr"> for Ludo Online</span> <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="card c4 lime reveal">
+          <p class="label">Android · Personal project · 2026</p>
+          <h3>FitLog</h3>
+          <p>An offline fitness tracker with a coach you can audit: trend weight, adaptive calories, progressive overload and plateau detection, each traceable to a formula.</p>
+          <ul class="tags"><li>Kotlin</li><li>Jetpack Compose</li><li>Room</li></ul>
+          <a class="source" href="https://github.com/Musa-Gondal/FitLog" target="_blank" rel="noopener">View source<span class="sr"> for FitLog</span> <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="card c4 reveal">
+          <p class="label">Databases · Team of 4 · Fall 2025</p>
+          <h3>AKPay</h3>
+          <p>A campus-wallet course project with transfers and QR vendor payments. One service contract has two data layers, LINQ and stored procedures, switchable at runtime.</p>
+          <ul class="tags"><li>C#</li><li>.NET</li><li>SQL Server</li><li>Kubernetes</li></ul>
+          <a class="source" href="https://github.com/Musa-Gondal/AKPay" target="_blank" rel="noopener">View source<span class="sr"> for AKPay</span> <span aria-hidden="true">↗</span></a>
+        </article>
+
+        <article class="card c7 reveal">
+          <p class="label">Mobile · Team of 5 · Spring 2026</p>
+          <h3>BetterCaps</h3>
+          <p>A university mental-health app with counselor matching, booking and waitlists, a one-tap crisis button, and a discreet mode that masks counseling terms in public.</p>
+          <ul class="tags"><li>Android</li><li>Java</li><li>Firebase</li><li>Figma</li></ul>
+        </article>
+
+        <article class="card c5 reveal">
+          <p class="label">Data science · Team project · Spring 2025</p>
+          <h3>HR attrition prediction</h3>
+          <p class="delta"><span>2.6%</span><span aria-hidden="true">→</span><span class="sr">to</span><strong>41%</strong></p>
+          <p>Minority-class recall on IBM’s imbalanced HR dataset, raised by class weighting in logistic regression.</p>
+          <ul class="tags"><li>Python</li><li>scikit-learn</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="wrap">
+      <h2 class="reveal">From the loss function to the load balancer.</h2>
+      <div class="about-grid">
+        <div>
+          <p class="statement">I’m Muhammad Hassan Musa Gondal, a computer science student at LUMS graduating in 2027. My work runs from hand-written training loops to the cloud services that put code in front of people.</p>
+          <h3>Education</h3>
+          <p><strong>BS Computer Science, LUMS</strong><br>Sep 2023 to expected May 2027</p>
+          <p>Graduate courses taken as an undergraduate: Advanced GenAI and Agents, MLOps and Agentic AI, NLP, and Blockchain.</p>
+          <h3>Leadership</h3>
+          <p><strong>Director of Marketing, LUMS E-Gaming Society</strong><br>Sep 2025 to May 2026. Led design, social media and logistics teams, and secured 1M+ PKR in sponsorships.</p>
+          <p><strong>Manager, Marketing and Corporate Relations, LUMS Entrepreneurial Society</strong><br>Oct 2023 to Apr 2024. Negotiated corporate partnerships.</p>
+        </div>
+        <dl class="skills">
+          <div class="skill reveal"><dt>AI and ML</dt><dd>PyTorch, Hugging Face Transformers, TRL, PEFT and LoRA, SFT, DPO, LangGraph, LangChain, Databricks, scikit-learn</dd></div>
+          <div class="skill reveal"><dt>Cloud and DevOps</dt><dd>Microsoft Azure, Kubernetes, Docker, GitHub Actions, Azure DevOps, Modal, Linux, Bash</dd></div>
+          <div class="skill reveal"><dt>Web, mobile and data</dt><dd>React, Node.js, Express, Socket.IO, REST APIs, Android, Jetpack Compose, Firebase, MongoDB, SQL Server, MySQL, EF Core, Figma</dd></div>
+          <div class="skill reveal"><dt>Languages</dt><dd>Python, C++, Java, Kotlin, TypeScript, JavaScript, C#, SQL, HTML, CSS</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2 class="reveal">Have a system that needs building?</h2>
+      <a class="email" href="mailto:musagondal94@gmail.com">musagondal94<wbr>@gmail.com</a>
+      <div class="actions">
+        <button class="btn" id="copy" type="button">Copy email</button>
+        <a class="btn" href="https://github.com/Musa-Gondal" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/musa-gondal" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <p class="sr" id="copy-status" aria-live="polite"></p>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap"><p>Muhammad Hassan Musa Gondal</p><p>You read to the end. Scorer says: no refinement needed.</p></footer>
+</body>
+</html>
